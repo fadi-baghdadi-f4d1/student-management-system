@@ -1,7 +1,7 @@
 # Student Management System
 
 ## About
-A Rest CRUD APIs for adding, selecting, updating, and removing students. Using Spring Boot Framework.
+A Rest CRUD APIs for adding, selecting, updating, and removing students. Using Spring Boot Framework and MongoDB for database.
 
 
 ### **Note:**
