@@ -35,7 +35,7 @@ public class StudentService {
             if (students.isEmpty()) {
                 return new ResponseEntity<>("No Students available", HttpStatus.NOT_FOUND);
             }
-            return ResponseEntity.ok(this.studentRepository.findAll());
+            return ResponseEntity.ok(students);
         } catch (Exception e) {
             return new ResponseEntity<HttpStatus>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -45,7 +45,7 @@ public class StudentService {
         try {
             Optional<Student> student = studentRepository.findById(studentId);
             if (student.isPresent()) {
-                return ResponseEntity.ok(this.studentRepository.findById(studentId));
+                return ResponseEntity.ok(student);
             }
             return new ResponseEntity<>("Student not found", HttpStatus.NOT_FOUND);
         } catch (Exception e) {
